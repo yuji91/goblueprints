@@ -8,7 +8,8 @@ import (
 	"path/filepath"
 	"sync"
 	"text/template"
-
+	// go.mod file not found in current directory
+	// go mod tidyを実行
 	"github.com/matryer/goblueprints/chapter1/trace"
 )
 
