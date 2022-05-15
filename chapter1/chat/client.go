@@ -20,6 +20,8 @@ type client struct {
 func (c *client) read() {
 	defer c.socket.Close()
 	for {
+		// _ は空白識別子。関数の返す値を無視して、未使用の変数を作らせない。
+		// https://asapoon.com/article/golang-post/4414/golang-blank-identifier/
 		_, msg, err := c.socket.ReadMessage()
 		if err != nil {
 			return
