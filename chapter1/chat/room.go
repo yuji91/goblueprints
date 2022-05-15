@@ -40,6 +40,11 @@ func newRoom() *room {
 	}
 }
 
+// room型に所属する関数（メソッド）今回は値型ではなくポインタ型に対してのメソッド定義。
+// https://skatsuta.github.io/2015/12/29/value-receiver-pointer-receiver/
+
+// 参照渡しであるポインタレシーバを使用することで、メソッドからレシーバの値を直接変更できる。
+// https://cloudsmith.co.jp/blog/backend/go/2021/06/1816290.html
 func (r *room) run() {
 	for {
 		select {
