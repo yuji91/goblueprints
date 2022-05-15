@@ -43,6 +43,8 @@ func main() {
 
 	// start the web server
 	log.Println("Starting web server on", *addr)
+	// 簡易文つきif：変数errのスコープを狭めてエラーハンドリングができる
+	// https://code-database.com/knowledges/97
 	if err := http.ListenAndServe(*addr, nil); err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
